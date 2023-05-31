@@ -34,7 +34,7 @@ def unauthorized() -> str:
     Returns:
         str: 401 status code
     '''
-    abort(401)
+    return jsonify({"error": "Unauthorized"}), 401
 
 
 @app_views.route("/forbidden/",
