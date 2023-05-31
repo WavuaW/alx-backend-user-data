@@ -4,7 +4,7 @@
 from flask import jsonify, abort
 from api.v1.views import app_views
 
-@app_views.route('/unauthorized', method=['GET'], strict_slashes=False)
+@app_views.route('/unauthorized', methods=['GET'], strict_slashes=False)
 def auth() -> str:
     '''Sending a GET request to /api/v1/unauthorized
     '''
