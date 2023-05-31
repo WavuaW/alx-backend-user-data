@@ -25,9 +25,24 @@ def stats() -> str:
     stats['users'] = User.count()
     return jsonify(stats)
 
-@app_views.route("/unauthorized/", strict_slashes=False)
+
+@app_views.route("/unauthorized/",
+                 strict_slashes=False)
 def unauthorized() -> str:
-    '''Takes from the unothorized section of app.py 
-    and uses abort to return 401 status code
+    '''Route unauthorized requests
+
+    Returns:
+        str: 401 status code
     '''
     abort(401)
+
+
+@app_views.route("/forbidden/",
+                 strict_slashes=False)
+def forbidden() -> str:
+    '''Route forbidden requests
+
+    Returns:
+        str: 403 status code
+    '''
+    abort(403)
