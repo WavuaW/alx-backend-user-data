@@ -1,0 +1,1 @@
+Placeholder for cookie Session Authentication
