@@ -5,4 +5,4 @@ Definition of class SessionAuth
 from .auth import Auth
 from models.user import User
 
-class SessionAuth(Auth):
+class SessionAuth(Auth)
