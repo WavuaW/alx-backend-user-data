@@ -16,7 +16,7 @@ def login() -> Tuple[str, int]:
       - JSON representation of a User object.
     """
     not_found_res = {"error": "no user found for this email"}
-    email = request.form.get('emial')
+    email = request.form.get('email')
     if email is None or len(email.strip()) == 0:
         return jsonify({"error": "email missing"}), 400
     password = request.form.get('password')
