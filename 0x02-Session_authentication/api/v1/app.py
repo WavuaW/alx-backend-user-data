@@ -42,6 +42,7 @@ def prev_req():
                 abort(403, description="Forbidden")
             request.current_user = user
 
+
 @app.errorhandler(401)
 def unauthorized(error) -> str:
     '''Handles unauthorized requests
