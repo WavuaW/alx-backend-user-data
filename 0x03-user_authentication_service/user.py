@@ -16,7 +16,7 @@ class User(Base):
     email = Column('email', String, nullable=False)
     hashed_password = Column('hashed_password', String, nullable=False)
     session_id = Column('session_id', String, nullable=False)
-    reset_token = Column('session_id', String, nullable=False)
+    reset_token = Column('reset_token', String, nullable=False)
 
     def __init___(self, id, email, hashed_password, session_id, reset_token):
         self.id = id
