@@ -15,8 +15,8 @@ class User(Base):
     id = Column('id', Integer, primary_key=True)
     email = Column('email', String(250), nullable=False)
     hashed_password = Column('hashed_password', String(250), nullable=False)
-    session_id = Column('session_id', String(250), nullable=False)
-    reset_token = Column('reset_token', String(250), nullable=False)
+    session_id = Column('session_id', String(250), nullable=True)
+    reset_token = Column('reset_token', String(250), nullable=True)
 
     def __init___(self, id, email, hashed_password, session_id, reset_token):
         '''Initializing the columnss
