@@ -14,10 +14,10 @@ class User(Base):
     __tablename__ = 'users'
 
     id = Column('id', Integer, primary_key=True)
-    email = Column('email', String, nullable=False)
-    hashed_password = Column('hashed_password', String, nullable=False)
-    session_id = Column('session_id', String, nullable=False)
-    reset_token = Column('reset_token', String, nullable=False)
+    email = Column('email', String(250), nullable=False)
+    hashed_password = Column('hashed_password', String(250), nullable=False)
+    session_id = Column('session_id', String(250), nullable=False)
+    reset_token = Column('reset_token', String(250), nullable=False)
 
     def __init___(self, id, email, hashed_password, session_id, reset_token):
         self.id = id
