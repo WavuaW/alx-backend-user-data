@@ -20,6 +20,8 @@ class User(Base):
     reset_token = Column('reset_token', String(250), nullable=False)
 
     def __init___(self, id, email, hashed_password, session_id, reset_token):
+        '''Initializing the colums
+        '''
         self.id = id
         self.email = email
         self.hashed_password = hashed_password
