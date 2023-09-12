@@ -7,8 +7,9 @@ from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
+
 class User(Base):
-    '''A user class that implements user functionalities 
+    '''A user class that implements user functionalities
     '''
     __tablename__ = 'users'
 
