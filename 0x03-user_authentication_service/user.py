@@ -3,7 +3,6 @@
 '''
 from sqlalchemy import Column, String, Integer, ForeignKey, create_engine, CHAR
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
@@ -20,7 +19,7 @@ class User(Base):
     reset_token = Column('reset_token', String(250), nullable=False)
 
     def __init___(self, id, email, hashed_password, session_id, reset_token):
-        '''Initializing the colums
+        '''Initializing the columnss
         '''
         self.id = id
         self.email = email
