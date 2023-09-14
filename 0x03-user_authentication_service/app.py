@@ -35,7 +35,7 @@ def users() -> str:
 @app.route("/sessions", methods=["POST"], strict_slashes=False)
 def login() -> str:
     '''POST /sessions
-    rerurn:
+    Return:
         - the account login payload.
     '''
     email, password = request.form.get("email"), request.form.get("password")
