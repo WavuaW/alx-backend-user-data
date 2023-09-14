@@ -34,10 +34,10 @@ def users() -> str:
 
 @app.route("/sessions", methods=["POST"], strict_slashes=False)
 def login() -> str:
-    '''POST /sessions
+    """POST /sessions
     Return:
-        - the account login payload.
-    '''
+        - The account login payload.
+    """
     email, password = request.form.get("email"), request.form.get("password")
     if not Auth.valid_login(email, password):
         abort(401)
