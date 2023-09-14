@@ -38,7 +38,7 @@ def login() -> str:
     rerurn:
         - the account login payload.
     '''
-    email, password = request.form.get('email'), request.form.get('password')
+    email, password = request.form.get("email"), request.form.get("password")
     if not Auth.valid_login(email, password):
         abort(401)
     session_id = Auth.create_session(email)
